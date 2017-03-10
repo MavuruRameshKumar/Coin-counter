@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Coin Counter </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+body{
+	background-color: grey;
+}
+.container {
+	width: 300px;
+	background-color: #fff;
+	height: auto;
+	border: 1px solid black;
+	margin: 40px auto;
+}
+
+.form_main h4 {
+    font-family: roboto;
+	width: auto;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+	text-align: center;
+}
+   
+.form {
+    border-radius: 7px;
+    padding: 6px;
+	margin-bottom: 30px;
+}
+.txt[type="text"] {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+
+#calculate {
+    background: #242424 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+#calculate:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #5793ef;
+    transition: all 0.5s ease 0s;
+}
+
+	
+	
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+    <div class="col-md-12">
+		<div class="form_main">
+                <h4 class="heading"><strong>COIN COUNTER<span></span></h4>
+                <div class="form">
+                <form>
+                    <div class="circle">
+						<input type="text" value="" name="denomination1" class="txt">
+						<div class="circle inner">
+							<input type="text" value="" name="denomination1" class="txt">
+						</div>
+					</div>
+                    <input type="text" value="" name="denomination2" class="txt">
+                    <input type="text" value="" name="denomination3" class="txt">
+                    <input type="text" value="" name="denomination4" class="txt">
+                    <input type="text" value="" name="entry" class="txt">
+                    <input type="button" value="CALCULATE" id="calculate" onclick="calculate();">
+                </form>
+				</div>
+        </div>
+     </div>
+	</div>
+</div>
+</body>
+</html>
