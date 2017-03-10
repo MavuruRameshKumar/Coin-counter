@@ -2,137 +2,53 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title> Coin Counter </title>
+<title>Coin Counter </title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style type="text/css">
-
-body{
-	background-color: #F7F7F9;
-}
-.container {
-	width: 300px;
-	background-color: #fff;
-	height: auto;
-	border: 1px solid black;
-	margin: 40px auto;
-}
-.form_main h6 {
-    font-family: roboto;
-	width: auto;
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    text-transform: uppercase;
-	text-align: center;
-}
-.form {
-    border-radius: 7px;
-    padding: 6px;
-	margin-bottom: 30px;
-}
-.txt[type="text"] {
-    border: none;
-	background-color: #d0d3db;
-	font-weight: normal;
-    margin: 20px 27px;
-    padding: 10px 0 10px 5px;
-    width: 30%;
-	height: 45%;
-}
-#text {
-	border: 1px solid #ccc;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-	text-align: right;
-	background-color: #F7F7F9;	
-}
-.circle {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	float: left;
-	margin: 20px;
-	background-color: #d0d3db;
-}
-.inner {
-	width: 20px;
-	height: 20px;
-	float: left;
-	margin: -80px 0px auto 55px;
-	background-color: #000;
-}
-#calculate {
-    background: #242424 none repeat scroll 0 0;
-    color: #fff;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 35px;
-    margin: 10px 0;
-    padding: 0;
-    text-transform: uppercase;
-    width: 100%;
-}
-#calculate:hover {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    color: #5793ef;
-    transition: all 0.5s ease 0s;
-}
-
-p {
-	margin: auto;
-	padding: 2px;
-	text-align: center;
-	color: white;
-	font-weight:normal;
-	font-size: 10px;
-}
-	
-	
-</style>
+<link rel="stylesheet" href="style.css" >
 </head>
 <body>
 <div class="container">
 	<div class="row">
     <div class="col-md-12">
 		<div class="form_main">
-                <h6 class="heading"><strong>COIN COUNTER<span></span></h6>
-                <div class="form">
-                <form>
-                    <div class="circle">
-						<input type="text" value="25" name="denomination1" class="txt">
-						<div class="circle inner">
-							<p id="count1">1</p>
-						</div>
+			<h6 class="heading"><strong>COIN COUNTER<span></span></h6>
+			<div class="form">
+			<form>
+				<div class="circle">
+					<input type="text" value="25" id="denomination-1" class="txt">
+					<div class="circle inner" id="inner-1">
+						<p id="count1">1</p>
 					</div>
-					<div class="circle">
-						<input type="text" value="10" name="denomination2" class="txt">
-						<div class="circle inner">
-							<p id="count2">2</p>
-						</div>
-					</div>
-					<div class="circle">
-						<input type="text" value="5" name="denomination3" class="txt">
-						<div class="circle inner">
-							<p id="count3">3</p>
-						</div>
-					</div>
-					<div class="circle">
-						<input type="text" value="1" name="denomination4" class="txt">
-						<div class="circle inner">
-							<p id="count4">4</p>
-						</div>
-					</div>
-                    <input type="text" value="" name="entry" id="text">
-                    <input type="button" value="CALCULATE" id="calculate" onclick="calculate();">
-                </form>
 				</div>
+				<div class="circle">
+					<input type="text" value="10" id="denomination-2" class="txt">
+					<div class="circle inner" id="inner-2">
+						<p id="count2">2</p>
+					</div>
+				</div>
+				<div class="circle">
+					<input type="text" value="5" id="denomination-3" class="txt">
+					<div class="circle inner"id="inner-3">
+						<p id="count3">3</p>
+					</div>
+				</div>
+				<div class="circle">
+					<input type="text" value="1" id="denomination-4" class="txt">
+					<div class="circle inner"id="inner-4">
+						<p id="count4">4</p>
+					</div>
+				</div>
+				<input type="text" value="" name="entry" id="text">
+				<button type="button" class="calculate" onclick="calculate();">CALCULATE</button>
+			</form>
+			</div>
         </div>
      </div>
 	</div>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
