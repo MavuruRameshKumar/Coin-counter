@@ -9,7 +9,7 @@
 <style type="text/css">
 
 body{
-	background-color: grey;
+	background-color: #F7F7F9;
 }
 .container {
 	width: 300px;
@@ -18,30 +18,53 @@ body{
 	border: 1px solid black;
 	margin: 40px auto;
 }
-
-.form_main h4 {
+.form_main h6 {
     font-family: roboto;
 	width: auto;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: normal;
     margin-bottom: 15px;
     margin-top: 20px;
     text-transform: uppercase;
 	text-align: center;
 }
-   
 .form {
     border-radius: 7px;
     padding: 6px;
 	margin-bottom: 30px;
 }
 .txt[type="text"] {
-    border: 1px solid #ccc;
-    margin: 10px 0;
+    border: none;
+	background-color: #d0d3db;
+	font-weight: normal;
+    margin: 20px 27px;
     padding: 10px 0 10px 5px;
-    width: 100%;
+    width: 30%;
+	height: 45%;
 }
-
+#text {
+	border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+	text-align: right;
+	background-color: #F7F7F9;	
+}
+.circle {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	float: left;
+	margin: 20px;
+	background-color: #d0d3db;
+}
+.inner {
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: -80px 0px auto 55px;
+	background-color: #000;
+}
 #calculate {
     background: #242424 none repeat scroll 0 0;
     color: #fff;
@@ -59,6 +82,14 @@ body{
     transition: all 0.5s ease 0s;
 }
 
+p {
+	margin: auto;
+	padding: 2px;
+	text-align: center;
+	color: white;
+	font-weight:normal;
+	font-size: 10px;
+}
 	
 	
 </style>
@@ -68,19 +99,34 @@ body{
 	<div class="row">
     <div class="col-md-12">
 		<div class="form_main">
-                <h4 class="heading"><strong>COIN COUNTER<span></span></h4>
+                <h6 class="heading"><strong>COIN COUNTER<span></span></h6>
                 <div class="form">
                 <form>
                     <div class="circle">
-						<input type="text" value="" name="denomination1" class="txt">
+						<input type="text" value="25" name="denomination1" class="txt">
 						<div class="circle inner">
-							<input type="text" value="" name="denomination1" class="txt">
+							<p id="count1">1</p>
 						</div>
 					</div>
-                    <input type="text" value="" name="denomination2" class="txt">
-                    <input type="text" value="" name="denomination3" class="txt">
-                    <input type="text" value="" name="denomination4" class="txt">
-                    <input type="text" value="" name="entry" class="txt">
+					<div class="circle">
+						<input type="text" value="10" name="denomination2" class="txt">
+						<div class="circle inner">
+							<p id="count2">2</p>
+						</div>
+					</div>
+					<div class="circle">
+						<input type="text" value="5" name="denomination3" class="txt">
+						<div class="circle inner">
+							<p id="count3">3</p>
+						</div>
+					</div>
+					<div class="circle">
+						<input type="text" value="1" name="denomination4" class="txt">
+						<div class="circle inner">
+							<p id="count4">4</p>
+						</div>
+					</div>
+                    <input type="text" value="" name="entry" id="text">
                     <input type="button" value="CALCULATE" id="calculate" onclick="calculate();">
                 </form>
 				</div>
